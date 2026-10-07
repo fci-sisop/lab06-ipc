@@ -8,14 +8,12 @@ Turma:
 
 Sistemas Operacionais - FCI Mackenzie - 2026.2
 
-Neste lab o `msh` do Lab 3 ganha o `|` e passa a sobreviver ao Ctrl-C. São
-três exercícios: os dois primeiros são feitos em sala e o terceiro é a
-conclusão, feita depois da aula.
+Neste lab o `msh` do Lab 3 vai dar suporte ao o `|` e também vai passar a sobreviver ao Ctrl-C (que mataria um processo comum).
 
-Cada exercício segue a mesma ordem: uma leitura curta, uma previsão escrita
-antes de rodar, um TODO e uma pergunta para depois. As respostas vão neste
-arquivo, na linha que começa com `>` logo abaixo de cada pergunta. Duas ou
-três frases bastam.
+Cada exercício segue essa ordem: você vão ler um material curto, dar uma previsão
+antes de rodar, e realizar um TODO e uma pergunta para depois. As respostas vão neste
+arquivo mesmo, nas linhas que começa com `>` logo abaixo de cada pergunta. 
+Umas duas ou três frases são suficientes.
 
 ```
 make             # compila ex1 e msh
@@ -24,7 +22,7 @@ bash check.sh    # mostra o que já está feito e o que falta
 ```
 
 O `rodar.sh` só executa a parte de um exercício depois que a previsão dele
-estiver escrita aqui.
+estiver escrita aqui. Então escreva sua hipótese antes de rodar.
 
 ---
 
@@ -38,10 +36,10 @@ https://man7.org/linux/man-pages/man7/pipe.7.html
 Se preferir um tutorial com código: Beej's Guide to IPC, capítulo "Pipes",
 seção "fork() and pipe()": https://beej.us/guide/bgipc/html/split/pipes.html
 
-**1.1 Antes de rodar.** Leia o `ex1_pipe.c` inteiro. O pai manda três linhas,
+**1.1 Antes de rodar.** Leia todo o `ex1_pipe.c`. O pai manda três linhas,
 fecha a ponta de escrita e espera o filho. Qual vai ser a última mensagem na
 tela, e o programa termina sozinho? Escreva a previsão e o raciocínio que
-levou a ela. Conferir primeiro e escrever depois não vale.
+levou a ela. Não vale conferir/rodar antes de escrever!
 
 > 
 
@@ -100,9 +98,6 @@ de parada. No `yes | head -3` ele terminou mesmo assim. O que o encerrou?
 
 > 
 
-Para quem terminar cedo (não vale nota): `cat msh.c | grep TODO | wc -l`,
-com dois pipes na mesma linha.
-
 ---
 
 ## 3. Conclusão: Ctrl-C no msh
@@ -119,7 +114,7 @@ https://beej.us/guide/bgipc/html/split/signals.html
 
 **3.1 Antes de mexer no código.** No msh como está, você vai rodar `sleep 30`
 e apertar Ctrl-C. Quem morre: só o `sleep`, só o msh, ou os dois? Escreva a
-previsão e o motivo, e só então teste.
+previsão e o motivo, e teste só depois de ter feito tudo isso.
 
 > 
 
